@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Github API Web App using jQuery</title>
+  <meta name="author" content="Tami Williams">
+   <link href="https://fonts.googleapis.com/css?family=Raleway|Open+Sans&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+</head>
+
+<body>
+ <main>
+  <header>
+    <h1>Github API Web App: Find a User and Their Repos</h1>
+  </header>
+  
+    <p>Enter single user name below and click the button to find that user and their repositories (100 max) via JSON.</p>
+    
+    <form id="js-form">
+    <input type="text" name="search-term" id="search-term" placeholder="Enter Github username" required aria-required="true">
+    
+    <button id="submit-btn">Search</button>
+    </form>
+    
+    <p id="js-error-message" class="error-message"></p>
+    
+    <section id="results" class="results"></section>
+    
+  </main>
+  
+  
+<!-- jQuery CDN -->
+<script
+src="https://code.jquery.com/jquery-3.4.0.min.js"
+integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+crossorigin="anonymous"
+></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>
