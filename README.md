@@ -1,6 +1,6 @@
 # github-api-user-and-repo-search
 
-[View Live]()
+[View Live](https://asktami.github.io/github-api-user-and-repo-search/)
 
 Requirements:
 - The user must be able to search for a GitHub user handle.
