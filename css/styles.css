@@ -15,12 +15,15 @@ br {
 	line-height: 20px; 
 	} 
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-ol, ul { list-style: none; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+	display: block; 
+}
 
+ol, ul { 
+	list-style: none;
+	margin-top: 20px;
+ }
 
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 strong, b { font-weight: 900; } 
 
 
@@ -30,12 +33,7 @@ h1 {
 
 h2 {
   font: 400 1.5em 'Raleway', cursive;
-  margin-top: 20px;
 }
-
-p {
-  margin-top:20px;
- }
 
 a { 
   color: #8eadd2;
@@ -47,8 +45,7 @@ a:hover {
 
 /* page structure */
 main {
-  display: flex;
-  flex-direction: column;
+  display: block;
   width: 80%;
   margin: 0 auto;
   background: #fff;
@@ -61,8 +58,9 @@ main {
   border-radius: 4px;
 }
 
-#results {
-  padding: 20px 0;
+
+#results, #errors {
+  margin-top: 20px;
 }
 
 #loader {
@@ -165,4 +163,3 @@ main {
   -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,0.25);
   box-shadow: inset 0 3px 5px rgba(0,0,0,0.25);
 }
-

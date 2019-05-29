@@ -30,17 +30,20 @@ function getUser(username, maxResults=1) {
   fetch(queryURL)
     .then(response => {
       if (response.ok) {
+      // here response.status is always 200, but when 404/not found it is blank
         return response.json();
       }
       throw new Error(response.statusText);
     })
     .then(responseJson => {
     // if there are previous results, remove them
+    			$('#js-user-error-message').empty();
 				$('#results').empty();
 				$('#results').html(formatUser(responseJson));
 				getUserRepos(username, 100);
 	})
     .catch(err => {
+    	console.log('error = ' + err.message);
     	$('#results').empty();
     	$('#js-user-error-message').empty();
     	$('#js-user-error-message').html(`Something went wrong retrieving the user: ${err.message}`);
@@ -69,6 +72,7 @@ const params = {
       throw new Error(response.statusText);
     })
     .then(responseJson => {
+    			$('#js-repos-error-message').empty();
 				$('#results').append(formatRepos(responseJson));
 	})
     .catch(err => {
